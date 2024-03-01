@@ -1,4 +1,4 @@
-import { useFormik } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 
 const initialValues = {
   name: "",
@@ -8,6 +8,7 @@ const initialValues = {
 
 const onSubmit = (values) => {
   console.log(values);
+
 };
 
 const validate = (values) => {
@@ -27,68 +28,48 @@ const validate = (values) => {
 };
 
 const YoutubeForm = () => {
-  const formik = useFormik({
-    initialValues,
-    onSubmit,
-    validate,
-  });
 
-  //   console.log(formik.values);
-  console.log(formik.touched);
   return (
     <>
-      <form action="" onSubmit={formik.handleSubmit} className='main-form' >
+      <Formik initialValues={initialValues} onSubmit={onSubmit} validate={validate} >
+      <Form action="" className='main-form' >
         <div className='yt-form' >
         <label htmlFor="name">Name</label>
-        <input
+        <Field
           type="text"
           id="name"
           name="name"
-          {...formik.getFieldProps('name')}
         />
         <div className="">
-          <p className="error-msg">
-            {formik.touched.name && formik.errors.name
-              ? formik.errors.name
-              : null}
-          </p>
+          <ErrorMessage name='name' />
         </div>
 
         <label htmlFor="email">Email</label>
-        <input
+        <Field
           type="email"
           id="email"
           name="email"
-          {...formik.getFieldProps('email')}
         />
         <div className="">
-          <p className="error-msg">
-            {formik.touched.email && formik.errors.email
-              ? formik.errors.email
-              : null}
-          </p>
+          <ErrorMessage name='email' />
         </div>
 
         <label htmlFor="channel">Channel</label>
-        <input
+        <Field
           type="channel"
           id="channel"
           name="channel"
-          {...formik.getFieldProps('channel')}
         />
         <div className="">
-          <p className="error-msg">
-            {formik.touched.channel && formik.errors.channel
-              ? formik.errors.channel
-              : null}
-          </p>
+          <ErrorMessage name='channel' />
         </div>
 
         <button type="submit" className="btn">
           Submit
         </button>
         </div>
-      </form>
+      </Form>
+      </Formik>
     </>
   );
 };
