@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.yt-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  gap: 0.4rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+  padding: 10px 50px;
+  font-family: 'poppins', sans-serif;
+}
+.main-form{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.yt-form input {
+  width: 25vw;
+  padding: 0.5rem 0.2rem;
+}
+
+.btn {
+  background-color: rgb(7, 90, 214);
+  width: 8vw;
+  padding: 5px;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.error-msg {
+  color: red;
+}
