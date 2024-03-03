@@ -21,15 +21,15 @@
   padding: 0.5rem 0.2rem;
 }
 
-.btn {
-  background-color: rgb(7, 90, 214);
-  width: 8vw;
-  padding: 5px;
-  border: none;
-  color: #fff;
-  border-radius: 6px;
-  cursor: pointer;
-}
+/*.btn {*/
+/*  background-color: rgb(7, 90, 214);*/
+/*  width: 8vw;*/
+/*  padding: 5px;*/
+/*  border: none;*/
+/*  color: #fff;*/
+/*  border-radius: 6px;*/
+/*  cursor: pointer;*/
+/*}*/
 
 .error {
   color: red;
